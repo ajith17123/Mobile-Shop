@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          }
+         body {
+            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(25deg,rgb(140, 140, 233),rgb(233, 202, 202));
+            min-height: 100vh;
+         }
+         .navbar-brand {
+            font-weight: bold;
+            color: #ffffff;
+            margin-left: 20px;
+            font-size: large;
+         } 
+         .navbar-nav .nav-link {
+            color: #adb5bd;
+            transition: 0.3s;
+         }
+         .container-fluid {
+            background-color: #212529;
+            border-radius: 20px;
+            padding: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+         }
+         .navbar-nav .nav-link:hover {
+                 background-color: rgba(255, 255, 255, 0.1);
+                 color: #ffffff;
+                 border-radius: 1px;
+         }
+         .dropdown-item {
+            color: white;
+            font-weight: 300;
+            transition: 0.3s;
+         }
+         .dropdown-menu {
+            background-color: #212529;
+            border: 1px solid #444;
+         }
+         .section h4 {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+            gap: 15px;
+         }
+         .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 20px;
+         }
+        .form-control {
+            border-radius: 10px;
+            padding: 12px;
+            border: 1px solid;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+        .btn-submit {
+            padding: 10px 40px;
+            border-radius: 30px;
+            font-weight: bold;
+            background-color: #212529;
+            border: none;
+        }
+        .btn-submit:hover {
+            background-color: #333;
+        }
+        .foot-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+         .hero-s {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url(Assets/Images/Samsung\ A14\ -\ PUMPKIN\ PRODUCTIONS.jpg.jfif);
+            color: white;
+            background-position: center;
+            justify-content: center;
+        }
+         .hero-s button:hover {
+            background-color: blue;
+            color: white;
+         }
+         .product-card {
+            border: none;
+            border-radius: 50px;
+            transition: 0.4s;
+            overflow: hidden;
+            background-color: gray;
+        }
+        .product-card img {
+            height: 250px;
+            width: 100%;
+            object-fit: contain;
+        }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+        .card button {
+            background-color: blue;
+            color: white;
+        }
+        .offer-banner {
+            background: #212529;
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+         .offer-banner:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+         .testimonial-section {
+          padding: 40px 0;
+         }
+         #about {
+          padding: 60px 0;
+         }
+         .testimonial-card {
+         background: rgba(255, 255, 255, 0.2);
+         backdrop-filter: blur(12px);
+         border: 1px solid rgba(255, 255, 255, 0.3);
+         border-radius: 40px;
+         padding: 50px 30px;
+         margin: 20px auto;
+         color: #212529;
+         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+     </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"><i class="bi bi-phone-fill"></i>Phone Hub</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Models</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            All Products
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Mobiles</a></li>
+            <li><a class="dropdown-item" href="#">Accessories</a></li>
+            <li><a class="dropdown-item" href="#">Back Cover</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main>
+    <section id="hero">
+        <div class="hero-s" data-aos="zoom-in">
+             <h1 class="display-3 fw-bold">Next Gen Smartphones</h1>
+             <p class="lead">Experience the future of mobile technology today.</p>
+             <button class="btn btn-dark btn-lg px-5 rounded-pill" data-aos="zoom-in">Shop Now</button>
+        </div>
+    </section>
+    <section id="Models" class="py-4 my-5">
+         <h2 class="text-center fw-bold mb-5"data-aos="fade-left">Featured Models</h2>
+         <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="product-card p-4" data-aos="fade-right">
+         <img src="Assets/Images/iphone.jpg" class="mx-auto mb-3" alt="Apple">
+         <h5 class="fw-bold">iPhone Air 1TB</h5>
+         <p class="text-light"><i class="bi bi-currency-rupee"></i>1,32,490.00</p>
+         <button class="btn btn-outline-dark rounded-pill btn-sm">Buy Now</button>
+  </div>
+  </div>
+         <div class="col-md-4">
+         <div class="product-card p-4" data-aos="fade-up">
+         <img src="Assets/Images/Redmi.jpg" class="mx-auto mb-3" alt="Apple">
+         <h5 class="fw-bold">Redmi Note 15 Pro+</h5>
+         <p class="text-light"><i class="bi bi-currency-rupee"></i>43,999.00</p>
+         <button class="btn btn-outline-dark rounded-pill btn-sm">Buy Now</button>
+         </div>
+         </div>
+         <div class="col-md-4">
+         <div class="product-card p-4" data-aos="fade-left">
+         <img src="Assets/Images/Samsung.jpg" class="mx-auto mb-3" alt="Apple">
+         <h5 class="fw-bold">Samsung Galaxy M56</h5>
+         <p class="text-light"><i class="bi bi-currency-rupee"></i>24,999.00</p>
+         <button class="btn btn-outline-dark rounded-pill btn-sm">Buy Now</button>
+         </div>
+         </div>
+</div>
+    </section>
+    <section class="container" data-aos="flip-up">
+        <div class="offer-banner text-center">
+            <h2 class="fw-bold">Exclusive Summer Sale!</h2>
+            <p class="mb-4">Get Flat 20% OFF on iphone Air 1TB on HDFC Credit Cards.</p>
+            <h4 class="fw-bold text-warning">CODE: PHONE20</h4>
+        </div>
+    </section>
+    <section id="testimonials" class="testimonial-section">
+    <div class="container text-center"data-aos="zoom-out">
+        <h2 class="fw-bold mb-5">Customer Stories</h2>
+        
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators" style="bottom: -60px;">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="testimonial-card" style="max-width: 800px;">
+                        <i class="bi bi-quote fs-1 text-dark opacity-50"></i>
+                        <p class="fs-5 italic px-md-5">"Phone Hub-la iPhone Air vaanguனது nalla experience. Delivery romba fast-aa irunthuchu. Customer support team doubts-a super-aa clear pannunga."</p>
+                        <h5 class="fw-bold mt-4 mb-0">Raja Krishnan</h5>
+                        <p class="text-muted small">Verified Buyer</p>
+                        <div class="star-rating">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="testimonial-card" style="max-width: 800px;">
+                        <i class="bi bi-quote fs-1 text-dark opacity-50"></i>
+                        <p class="fs-5 italic px-md-5">"Redmi Note 15 Pro+ exchange offer-la vaanguனேன். Old phone-ku nalla price kuduthanga. Very happy with the purchase!"</p>
+                        <h5 class="fw-bold mt-4 mb-0">Shalini Devi</h5>
+                        <p class="text-muted small">Tech Enthusiast</p>
+                        <div class="star-rating">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="testimonial-card" style="max-width: 800px;">
+                        <i class="bi bi-quote fs-1 text-dark opacity-50"></i>
+                        <p class="fs-5 italic px-md-5">"Premium quality products and genuine service. Accessories collectio-num romba nalla irukku. Best mobile shop in town."</p>
+                        <h5 class="fw-bold mt-4 mb-0">Vikram Aditya</h5>
+                        <p class="text-muted small">Regular Customer</p>
+                        <div class="star-rating">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+    <section id="about py-4" data-aos="fade-right">
+          <h4 class="text-center">About Our Shop</h4>
+          <p class="text-center"> We dont sell gadgets; we provide a complete mobile experience. <br> Every device we sell comes with an official warranty and a promise of lifetime technical support.</p>
+    </section>
+    <section id="contact-us" class="py-3" data-aos="fade-left">
+        <form action="mailto:abc@gmail.com">
+  <div class="container">
+    <div id="contact-us-container">
+      <h4 class="text-center mb-4">Contact Us</h4>
+      
+      <div class="mb-3">
+        <label for="FormControlInput1" class="form-label fw-bold">Email address</label>
+        <input type="email" class="form-control" id="FormControlInput1" placeholder="name@example.com">
+      </div>
+      
+      <div class="mb-3">
+        <label for="FormControlTextarea1" class="form-label fw-bold">Message</label>
+        <textarea class="form-control" id="FormControlTextarea1" rows="4" placeholder="How can we help you?"></textarea>
+      </div>
+      
+      <div class="button-container">
+        <button type="submit" class="btn btn-submit text-white">Submit</button>
+      </div>
+    </div>
+  </div>
+  </form>
+</section>
+    <section id="footer">
+       <footer class="bg-dark text-white py-5 mt-5">
+  <div class="foot-container">
+    <div class="row">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="fw-bold mb-3 text-uppercase"><i class="bi bi-phone-fill"></i>Phone Hub</h5>
+        <p class="text-secondary small">
+          Latest smartphones. Official warranty. Fast delivery.
+        </p>
+        <div class="mt-4">
+          <a href="#" class="text-white me-3 social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-3 social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white me-3 social-icon"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white me-3 social-icon"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h5 class="fw-bold mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-secondary text-decoration-none small d-block mb-2">Shop All</a></li>
+          <li><a href="#" class="text-secondary text-decoration-none small d-block mb-2">My Account</a></li>
+          <li><a href="#" class="text-secondary text-decoration-none small d-block mb-2">Shipping Policy</a></li>
+          <li><a href="#" class="text-secondary text-decoration-none small d-block mb-2">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">Support</h5>
+        <ul class="list-unstyled text-secondary small">
+          <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Tamil Nadu</li>
+          <li class="mb-2"><i class="fas fa-phone-alt me-2 text-primary"></i>+91-9876543210</li>
+          <li><i class="fas fa-envelope me-2 text-primary"></i>support@phonehub.com</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary mt-5">
+    <div class="text-center text-secondary small">
+      &copy; 2026 MobiStore. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+    </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init(
+    {duration: 1200,
+      once: true
+    }
+  );
+</script>
+</body>
+</html>
